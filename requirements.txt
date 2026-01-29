@@ -1,0 +1,24 @@
+# ============================================================
+# English to Kannada Translator - Requirements
+# ============================================================
+
+# CORE WEB FRAMEWORK
+Flask>=2.0.0,<3.0.0
+
+# TRANSLATION
+googletrans==4.0.0rc1
+
+# TEXT-TO-SPEECH
+gTTS>=2.2.0
+
+# HTTP & NETWORKING
+requests>=2.25.0
+urllib3>=1.26.0
+
+# ============================================================
+# OPTIONAL DEVELOPMENT REQUIREMENTS
+# ============================================================
+# Uncomment below for development:
+# pytest>=7.0.0
+# black>=22.0.0
+# flake8>=4.0.0

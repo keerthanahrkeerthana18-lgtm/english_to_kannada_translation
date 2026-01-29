@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+h1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  padding: 30px 24px;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+form {
+  padding: 30px 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 140px;
+  transition: all 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.controls {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.result {
+  padding: 30px 24px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.kannada {
+  background: #f7f7f9;
+  padding: 18px;
+  border-radius: 8px;
+  font-size: 22px;
+  line-height: 1.8;
+  color: #0f172a;
+  margin-bottom: 18px;
+  border-left: 4px solid #667eea;
+  font-weight: 500;
+}
+
+audio {
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 6px;
+  outline: none;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    border-radius: 8px;
+  }
+
+  h1 {
+    font-size: 22px;
+    padding: 20px 16px;
+  }
+
+  form {
+    padding: 20px 16px;
+  }
+
+  .result {
+    padding: 20px 16px;
+  }
+
+  textarea {
+    font-size: 16px;
+  }
+
+  .kannada {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English → Kannada Translator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🌐 English → Kannada Translator</h1>
+    
+    <form method="post" id="translatorForm">
+      <label for="text">Enter English Text</label>
+      <textarea 
+        id="text" 
+        name="text" 
+        placeholder="Type something in English... e.g., 'Hello, how are you?'"
+      >{{ src_text }}</textarea>
+      
+      <div class="controls">
+        <button type="submit" class="btn">Translate</button>
+      </div>
+    </form>
+
+    {% if translation %}
+      <section class="result">
+        <h2>Kannada Translation</h2>
+        <div class="kannada">{{ translation }}</div>
+        <audio controls>
+          <source src="{{ url_for('tts') }}?text={{ translation | urlencode }}" type="audio/mpeg">
+          Your browser does not support audio playback.
+        </audio>
+      </section>
+    {% endif %}
+  </div>
+</body>
+</html>
